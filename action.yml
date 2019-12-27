@@ -1,0 +1,23 @@
+name: 'Publish Docker Image'
+description: 'Build Docker image and push it to Google Container Registry (GCR)'
+inputs:
+  gcloud_auth_key:
+    description: 'The JSON key that is used to access GCR'
+    required: true
+  gcloud_project_id:
+    description: 'Your Google Cloud Platform project ID'
+    required: true
+  hostname:
+    description: 'The GCR hostname, which specifies the region of the registry''s storage'
+    required: true
+  image_name:
+    description: 'The name of docker image (without hostname and tag)'
+    required: true
+outputs:
+  image_repository:
+    description: 'The repository of the pushed image'
+  image_version:
+    description: 'The image version correspond to the git branch or tag'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
