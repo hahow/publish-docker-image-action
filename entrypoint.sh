@@ -40,7 +40,7 @@ echo ::set-output name=image_repository::${image_repository}
 echo ::set-output name=image_version::${image_version}
 
 docker pull ${image_build_tag} || true
-docker build . --cache-from ${image_build_tag} -t ${image_build_tag}
+docker build ${INPUT_DOCKERFILE_PATH} --cache-from ${image_build_tag} -t ${image_build_tag}
 docker push ${image_build_tag}
 
 docker tag ${image_build_tag} ${image_repository}:${GITHUB_SHA}

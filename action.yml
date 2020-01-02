@@ -10,6 +10,10 @@ inputs:
   hostname:
     description: 'The GCR hostname, which specifies the region of the registry''s storage'
     required: true
+  dockerfile_path:
+    description: 'The path of Dockerfile'
+    required: true
+    default: '.'
   image_name:
     description: 'The name of docker image (without hostname and tag)'
     required: true
