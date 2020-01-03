@@ -17,6 +17,10 @@ Build Docker image and push it to Google Container Registry (GCR).
 
 **Required** The GCR hostname, which specifies the region of the registry's storage.
 
+### `dockerfile_path`
+
+**Required** The path of Dockerfile. Default `"."`.
+
 ### `image_name`
 
 **Required** The name of docker image (without hostname and tag).
