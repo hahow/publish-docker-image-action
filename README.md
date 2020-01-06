@@ -39,7 +39,7 @@ The image version correspond to the git branch or tag.
 
 ## Example usage
 
-    uses: hahow/publish-docker-image-action@master
+    uses: hahow/publish-docker-image-action@v1.0.0
     with:
       gcloud_auth_key: ${{ secrets.GCLOUD_AUTH_KEY }}
       gcloud_project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
